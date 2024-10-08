@@ -72,7 +72,6 @@ const Navbar: React.FC = () => {
                         handleNavigation(item.path)
                     }
                   }}>
-                    {/* {item.submenu ? item.name : (<Link href={item.path} />)} */}
                     {item.name}
                 </div>
               }
