@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    position: fixed;
+    width: "-webkit-fill-available";
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 5px 2px 11px rgba(0, 0, 0, 0.2);
+    color: white;
+    height: 75px;
+    background-color: #FFF;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.companyName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px; /* Slightly thicker for better visibility */
+    width: 30px; /* Increased width for better visibility */
+    background-color: red;
+    margin: 4px 0; /* Equal spacing between bars */
+    transition: all 0.3s ease;
+}
+
+.change1 {
+    transform: rotate(45deg) translate(5px, 5px); /* Adjusted translation for perfect symmetry */
+}
+
+.change2 {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.change3 {
+    transform: rotate(-45deg) translate(5px, -5px); /* Adjusted translation for perfect symmetry */
+}
+
+.searchImg {
+    cursor: pointer;
+}
+
+.searchInput {
+    height: 30px;
+    border: none;
+    /* box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1); */
+    padding-left: 10px;
+    font-size: larger;
+    width: 30vw;
+    background: none;
+}
+
+input.searchInput:focus {
+    outline: none;
+}
+
+.profile {
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column; /* Ensure menu items are displayed vertically */
+        padding: 10px 0; /* Add padding for vertical items */
+    }
+
+    .nav li {
+        margin: 10px 0; /* Space between vertical items */
+    }
+
+    .menuToggle {
+        display: flex;
+    }
+}
